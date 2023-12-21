@@ -63,7 +63,7 @@ class Leader():
       sleep_time = random.randint(1, 4)
       time.sleep(sleep_time)
       self.update_location()
-      print('My location: 'self.location)
+      print(self.location)
 
   def run(self):
     update_thread = threading.Thread(target=self.simulate)
