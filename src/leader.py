@@ -63,10 +63,11 @@ class Leader():
       sleep_time = random.randint(1, 4)
       time.sleep(sleep_time)
       self.update_location()
+      print('My location: 'self.location)
 
   def run(self):
-    thread = threading.Thread(target=self.simulate)
-    thread.start()
+    update_thread = threading.Thread(target=self.simulate)
+    update_thread.start()
 
     while True:
       client, address = self.server.accept()
@@ -77,7 +78,7 @@ class Leader():
       print(f'Connected to {host}:{port}')
       thread = threading.Thread(target=self.handle_client, args=(client,))
       thread.start()
-      self.threads.append(thread)
+      self.threads.append(update_thread)
 
 if __name__ == '__main__':
   leader = Leader()
