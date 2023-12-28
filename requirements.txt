@@ -1,0 +1,7 @@
+-i https://pypi.org/simple
+av==11.0.0; python_version >= '3.8'
+djitellopy==2.5.0; python_version >= '3.6'
+numpy==1.26.2; python_version >= '3.9'
+opencv-python==4.8.1.78; python_version >= '3.6'
+pillow==10.1.0; python_version >= '3.8'
+tqdm==4.66.1; python_version >= '3.7'
